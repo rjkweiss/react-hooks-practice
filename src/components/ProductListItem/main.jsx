@@ -1,8 +1,9 @@
-
-function ProductListItem() {
+import './ProductListItem.css';
+function ProductListItem({ product, isSelected, onClick }) {
     return(
-        <div className="product-list-item">
-            <h1>Hello from ProductListItem!</h1>
+        <div className={`product-list-item ${isSelected ? 'selected': ''}`}>
+            <img src={product.photo.filename} alt={product.name} />
+            <button onClick={onClick}>{product.name}</button>
         </div>
     );
 }

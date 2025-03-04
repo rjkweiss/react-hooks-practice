@@ -1,12 +1,12 @@
-import ProductView from "./components/ProductView/main"
+import ProductView from "./components/ProductView/main";
+import products from './mockdata/products.json';
 
 function App() {
   return (
-    <>
-    <h1>Hello from App!</h1>
-    <ProductView />
-    </>
-  )
+    <div className="main-app">
+      <ProductView products={products} />
+    </div>
+  );
 }
 
 export default App
